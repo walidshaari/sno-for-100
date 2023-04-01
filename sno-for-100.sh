@@ -168,7 +168,7 @@ fix_instance_id() {
 }
 
 download_adjust_single_node() {
-    local ret=$(curl --write-out "%{http_code}" https://raw.githubusercontent.com/eformat/sno-for-100/main/adjust-single-node.sh -o ${RUN_DIR}/adjust-single-node.sh)
+    local ret=$(curl --write-out "%{http_code}" https://raw.githubusercontent.com/walidshaari/sno-for-100/main/adjust-single-node.sh -o ${RUN_DIR}/adjust-single-node.sh)
     if [ "$ret" != "200" ]; then
         echo -e "🕱${RED}Failed - to download adjust-single-node.sh ?.${NC}"
         return $ret
@@ -177,7 +177,7 @@ download_adjust_single_node() {
 }
 
 download_fix_instance_id() {
-    local ret=$(curl --write-out "%{http_code}" https://raw.githubusercontent.com/eformat/sno-for-100/main/fix-instance-id.sh -o ${RUN_DIR}/fix-instance-id.sh)
+    local ret=$(curl --write-out "%{http_code}" https://raw.githubusercontent.com/walidshaari/sno-for-100/main/fix-instance-id.sh -o ${RUN_DIR}/fix-instance-id.sh)
     if [ "$ret" != "200" ]; then
         echo -e "🕱${RED}Failed - to download fix-instance-id.sh ?.${NC}"
         return $ret
@@ -224,7 +224,7 @@ download_openshift_cli() {
 }
 
 download_install_config() {
-    local ret=$(curl --write-out "%{http_code}" https://raw.githubusercontent.com/eformat/sno-for-100/main/install-config.yaml -o ${RUN_DIR}/install-config.yaml)
+    local ret=$(curl --write-out "%{http_code}" https://raw.githubusercontent.com/walidshaari/sno-for-100/main/install-config.yaml -o ${RUN_DIR}/install-config.yaml)
     if [ "$ret" != "200" ]; then
         echo -e "🕱${RED}Failed - to download install-config.yaml ?.${NC}"
         return $ret
